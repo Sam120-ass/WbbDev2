@@ -1,14 +1,26 @@
 import { useState } from 'react';
-import Header from './components/Header.jsx';
+
 import './App.css'
-import ItemContainer from './components/ItemContainer.jsx';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Homepage from './pages/Homepage';
+import Itempage from './pages/Itempage'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div> 
-      <Header/>
-      <ItemContainer className = "ItemContainerHP"/>
+
+
+      <BrowserRouter>
+
+      
+      <Routes>
+        <Route path='/' element = {<Homepage/>}/>
+        <Route path='/item/:id' element = {<Itempage/>}/>
+
+
+      </Routes>
+      </BrowserRouter>
     </div>
   )
 }
