@@ -7,12 +7,12 @@ const ItemCard = ({item}) => {
         <div>
             <Link to = {`/item/${item.id}`} state = {{item}}>
         <div className={styles.ItemCard}>
-            <img src='/6570396_sd.avif'></img>
-            <div className = {styles.ItemDetails}>
+             <img src='/6570396_sd.avif'></img>
+             <div className = {styles.ItemDetails}>
                 <p className ={styles.cardPrice}> ${item.price} </p>
                 <p className={styles.cardDescription}>{item.description}  </p>
             </div>
-        </div>
+            </div>
         </Link>
     </div>
     )
